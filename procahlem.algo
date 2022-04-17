@@ -6,6 +6,11 @@ BEGIN
 FOR i FROM 0 TO n  DO
 ps:=ps+v1[i]*v2[i];
 END_FOR
+IF (fn_dot_product(v1,v2)=0) THEN
+Write('the Two vectors are orthogonal');
+ELSE
+Write('the Two vectors are not orthogonal');
+END_IF
 RETURN ps
 END
 ALGORITHM dot_product_algo
@@ -18,9 +23,5 @@ FOR i FROM 0 TO n-1  DO
 Read(v1[i]);
 Read(v2[i]);
 END_FOR
-IF (fn_dot_product(v1,v2)=0) THEN
-Write('the Two vectors are orthogonal');
-ELSE
-Write('the Two vectors are not orthogonal');
-END_IF
+fn_dot_product(v1,v2,n);
 END
