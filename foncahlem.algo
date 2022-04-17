@@ -1,6 +1,7 @@
 PROCEDURE dot_product(VAR v1: ARRAY_OF INTEGER,v2 : ARRAY_OF INTEGER,n:integer)
 VAR
     i:INTEGER;
+    ps:INTEGER:=0;
 BEGIN
     FOR i FROM 0 TO n  DO
         ps:=ps+v1[i]*v2[i];
@@ -13,7 +14,6 @@ BEGIN
 END
 ALGORITHM dot_product_algo
 VAR
-ps:INTEGER:=0;
 n,i:INTEGER;
 v1,v2 : ARRAY_OF INTEGER[n];
 BEGIN
