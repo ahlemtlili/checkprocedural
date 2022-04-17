@@ -10,7 +10,7 @@ RETURN ps
 END
 ALGORITHM dot_product_algo
 VAR
-n,i,prods:INTEGER;
+n,i:INTEGER;
 v1,v2 : ARRAY_OF INTEGER[n];
 BEGIN
 Read(n);
