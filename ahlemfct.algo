@@ -1,4 +1,4 @@
-FUNCTION dot_product(var v1: ARRAY_OF INTEGER,v2 : ARRAY_OF INTEGER,n:integer) : INTEGER
+FUNCTION dot_product(v1: ARRAY_OF INTEGER,v2 : ARRAY_OF INTEGER,ps:integer) : INTEGER
 VAR
 ps:INTEGER:=0;
 i:INTEGER;
@@ -8,19 +8,22 @@ ps:=ps+v1[i]*v2[i];
 END_FOR
 RETURN ps
 END
+//program principal
 ALGORITHM dot_product_algo
 VAR
 n,i:INTEGER;
+ps:INTEGER:=0;
 v1,v2 : ARRAY_OF INTEGER[n];
 BEGIN
 Read(n);
-FOR i FROM 0 TO n-1  DO
-Read(v1[i]);
-Read(v2[i]);
-END_FOR
-IF (dot_product=0) THEN
+FOR i FROM 1 TO n STEP step  DO
+Read(v1);
+Read(v2); 
+ps=dot_product(v1,v2,ps)
+IF (ps=0) THEN
 Write('the Two vectors are orthogonal');
 ELSE
 Write('the Two vectors are not orthogonal');
 END_IF
+END_FOR
 END
